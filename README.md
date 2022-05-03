@@ -1,2 +1,9 @@
 # FocusPod
-A productivity website 
+A remake of the FocusPod Heroku mapped developed by : Lemonsu , Chirag & Carlos (myself).
+I decided to remake the app due to the numerous flaws I have found.
+
+## Features 
+1. Timer 
+2. To Do List 
+3. Ambient Sounds
+
