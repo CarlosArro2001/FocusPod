@@ -1,5 +1,7 @@
 html,body{
     background-color: #E5E5E5;
+    height:200%;
+    width: 100%;
 }
 #MainTitle{
     font-family: 'Grand Hotel';
@@ -11,7 +13,44 @@ html,body{
     margin-right: auto;
     width: 50%;
 }
-
 h2{
     font-family: 'Grand Hotel';
 }
+ul{
+    padding-top: 10px;
+    user-select: none;
+}
+ul li:hover{
+    background: #ddd;
+}
+ul li.checked{
+    text-decoration: line-through;
+}
+.close{
+    position: absolute;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.close:hover{
+    background-color: #A9A9A9;
+    color:white;
+}
+
+
+/* Add button*/
+.addBtn {
+    padding: 10px;
+    width: 25%;
+    background: #d9d9d9;
+    color: #555;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+  }
+  
+  .addBtn:hover {
+    background-color: #bbb;
+  }
