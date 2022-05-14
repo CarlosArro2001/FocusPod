@@ -4,6 +4,6 @@ I decided to remake the app due to the numerous flaws I have found.
 
 ## Features 
 1. Timer 
-2. To Do List 
+2. To Do List - FINISHED 
 3. Ambient Sounds
 

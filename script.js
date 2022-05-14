@@ -25,7 +25,7 @@ list.addEventListener('click',function(ev){
         ev.target.classList.toggle('checked');
     }
 },false);
-
+/*Adding a new task to the to do list*/
 function newElement() {
     var li = document.createElement("li");
     var inputValue = document.getElementById("myInput").value;
@@ -54,5 +54,37 @@ function newElement() {
 
 
 
-
+/* Starting of timer */
+var minutes;
+var seconds;
+function start(){
+  clearInterval(interval);
+  var min_el = document.getElementById('mins');
+  var sec_el = document.getElementById('secs');
+  minutes = parseInt(document.getElementById('time').value);
+  seconds = 0;
+  var interval = setInterval(
+    function(){
+        if(seconds ==0 && minutes ==0){
+          clearInterval(interval)
+          min_el.innerHTML = "00";
+          sec_el.innerHTML = "00";
+          alert();
+        }
+        else if (seconds == 0){
+          minutes = minutes -1;
+          seconds = 59;
+          min_el.innerHTML = minutes;
+          sec_el.innerHTML = seconds;
+          document.title = minutes + ":" + seconds;
+        }else if(seconds > 0){
+          seconds = seconds - 1;
+          min_el.innerHTML = minutes;
+          sec_el.innerHTML = seconds;
+          document.title = minutes + ":" + seconds;
+        }
+    },
+    1000
+  )
+}
 

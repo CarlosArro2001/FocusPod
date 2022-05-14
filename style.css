@@ -2,55 +2,87 @@ html,body{
     background-color: #E5E5E5;
     height:200%;
     width: 100%;
-}
-#MainTitle{
-    font-family: 'Grand Hotel';
-    text-align: center;
-}
-.topImage{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-}
-h2{
-    font-family: 'Grand Hotel';
-}
-ul{
-    padding-top: 10px;
-    user-select: none;
-}
-ul li:hover{
-    background: #ddd;
-}
-ul li.checked{
-    text-decoration: line-through;
-}
-.close{
-    position: absolute;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-.close:hover{
-    background-color: #A9A9A9;
-    color:white;
-}
+    }
+
+    #MainTitle{
+        font-family: 'Grand Hotel';
+        text-align: center;
+    }
+
+    .topImage{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    h2{
+        font-family: 'Grand Hotel';
+        text-align: center;
+    }
+    h4{
+      text-align: center;
+    }
+
+    #myInput{
+        border:none;
+        font-family: 'Oswald';
+        outline: none;
+    }
+    #timer, .timer_controls{
+      text-align: center;
+    }
+    #timer p{
+        display:inline;
+        word-wrap: break-word;
+    }
+    input[type=text]:focus {
+        border:none;
+    }
+
+    ul{
+        padding-top: 10px;
+        user-select: none;
+    }
+    li{
+        font-family: 'Oswald';
+    }
+
+    ul li:hover{
+        background: #ddd;
+    }
+
+    ul li.checked{
+        text-decoration: line-through;
+    }
+
+    .close{
+        position: absolute;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .close:hover{
+        background-color: #A9A9A9;
+        color:white;
+    }
 
 
-/* Add button*/
-.addBtn {
-    padding: 10px;
-    width: 25%;
-    background: #d9d9d9;
-    color: #555;
-    border-radius: 30px;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-    border-radius: 0;
-  }
-  
-  .addBtn:hover {
-    background-color: #bbb;
-  }
+    /* Add button*/
+    .addBtn {
+        padding: 10px;
+        width: 25%;
+        background: #d9d9d9;
+        color: #555;
+        border-radius: 30px;
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+        border-radius: 0;
+      }
+      
+      .addBtn:hover {
+        background-color: #bbb;
+      }
+      .timer{
+        align-items: center;
+      }
