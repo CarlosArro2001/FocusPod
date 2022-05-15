@@ -86,3 +86,16 @@ html,body{
       .timer{
         align-items: center;
       }
+
+      audio::-webkit-media-controls-panel{
+        background-color: #E5E5E5;
+      }
+
+      audio::-webkit-media-controls-timeline,
+      video::-webkit-media-controls-timeline {
+          display: none;
+      }
+      audio::-webkit-media-controls-current-time-display,
+      audio::-webkit-media-controls-time-remaining-display {
+          display: none;
+      }
