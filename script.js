@@ -55,36 +55,42 @@ function newElement() {
 
 
 /* Starting of timer */
-var minutes;
-var seconds;
-function start(){
-  clearInterval(interval);
-  var min_el = document.getElementById('mins');
-  var sec_el = document.getElementById('secs');
-  minutes = parseInt(document.getElementById('time').value);
-  seconds = 0;
-  var interval = setInterval(
-    function(){
-        if(seconds ==0 && minutes ==0){
-          clearInterval(interval)
-          min_el.innerHTML = "00";
-          sec_el.innerHTML = "00";
-          alert();
-        }
-        else if (seconds == 0){
-          minutes = minutes -1;
-          seconds = 59;
-          min_el.innerHTML = minutes;
-          sec_el.innerHTML = seconds;
-          document.title = minutes + ":" + seconds;
-        }else if(seconds > 0){
-          seconds = seconds - 1;
-          min_el.innerHTML = minutes;
-          sec_el.innerHTML = seconds;
-          document.title = minutes + ":" + seconds;
-        }
-    },
-    1000
-  )
-}
+var min_el = document.getElementById('mins');
+var mins =0;
+var seconds =59;
+var dropDown_time = parseInt(document.getElementById('time').value);
+$('#start').click(function(){
+      startTimer();
+});
 
+$('#stop').click(function(){
+      clearTimeout(timex);
+});
+
+$('#reset').click(function(){
+  mins =dropDown_time;
+	seconds =0;
+  $('#hours','#mins').html('00:');
+  $('#seconds').html('00');
+});
+
+function startTimer(){
+	
+  timex = setTimeout(function(){
+      seconds--;
+    if(seconds < 0){
+			seconds=59;
+			mins--;
+      min_el.innerHTML = mins;                 
+	    if(mins<10){                     
+	      $("#mins").text('0'+mins+':');
+			}else $("#mins").text(mins+':');
+    }    
+    if(seconds <10){
+      $("#seconds").text('0'+seconds);
+		} else{
+      $("#seconds").text(seconds);
+      }
+      startTimer();
+  },1000);
+}

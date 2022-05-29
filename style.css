@@ -5,6 +5,7 @@ html,body{
     }
 
     #MainTitle{
+        padding-top: 50px;
         font-family: 'Grand Hotel';
         text-align: center;
     }
@@ -28,12 +29,15 @@ html,body{
         font-family: 'Oswald';
         outline: none;
     }
-    #timer, .timer_controls{
+    #timer, .timer_controls{  
       text-align: center;
     }
-    #timer p{
+    #timer{
+        font-size: 50px;
+        font-family: 'Oswald';
         display:inline;
         word-wrap: break-word;
+        padding-bottom: 10px;
     }
     input[type=text]:focus {
         border:none;
@@ -64,7 +68,18 @@ html,body{
         background-color: #A9A9A9;
         color:white;
     }
+    /* Timer controls */
+    #start,#stop,#reset{
+        background-color: #C4C4C4;
+        font-family: 'Oswald';
+        border-radius: 20%;
+        transition-duration:0.4s;
+        border: none;
+    }
 
+    #start:hover, #stop:hover , #reset:hover{
+        background-color: white;
+    }
 
     /* Add button*/
     .addBtn {
