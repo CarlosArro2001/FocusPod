@@ -87,6 +87,7 @@ html,body{
         align-items: center;
       }
 
+      /*Audio styles*/
       audio::-webkit-media-controls-panel{
         background-color: #E5E5E5;
       }
