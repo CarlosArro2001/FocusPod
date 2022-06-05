@@ -54,9 +54,11 @@ function newElement() {
 
 /* Starting of timer */
 var min_el = document.getElementById('mins');
-var mins = parseInt(document.getElementById('time').value);
+var mins = 0;
 var seconds =59;
 $('#start').click(function(){
+      min_el.innerHTML = document.getElementById("time").value + ":";
+      mins = parseInt(document.getElementById("time").value);
       startTimer();
 });
 
@@ -72,7 +74,6 @@ $('#reset').click(function(){
 });
 
 function startTimer(){
-  min_el.innerHTML = (parseInt(document.getElementById('time').value)-1)+":";
   timex = setTimeout(function(){
       seconds--;
     if(seconds < 0){

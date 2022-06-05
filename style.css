@@ -77,6 +77,12 @@ html,body{
         border: none;
     }
 
+    #time{
+        background-color: #C4C4C4;
+        border:none;
+        font-style: bold;
+    }
+
     #start:hover, #stop:hover , #reset:hover{
         background-color: white;
     }
