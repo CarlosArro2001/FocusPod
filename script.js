@@ -52,13 +52,10 @@ function newElement() {
     }
   }
 
-
-
 /* Starting of timer */
 var min_el = document.getElementById('mins');
-var mins =0;
+var mins = parseInt(document.getElementById('time').value);
 var seconds =59;
-var dropDown_time = parseInt(document.getElementById('time').value);
 $('#start').click(function(){
       startTimer();
 });
@@ -68,14 +65,14 @@ $('#stop').click(function(){
 });
 
 $('#reset').click(function(){
-  mins =dropDown_time;
+  mins = parseInt(document.getElementById('time').value);
 	seconds =0;
-  $('#hours','#mins').html('00:');
+  $('#mins').html(mins+":");
   $('#seconds').html('00');
 });
 
 function startTimer(){
-	
+  min_el.innerHTML = (parseInt(document.getElementById('time').value)-1)+":";
   timex = setTimeout(function(){
       seconds--;
     if(seconds < 0){
