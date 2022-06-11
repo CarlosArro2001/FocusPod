@@ -55,7 +55,7 @@ function newElement() {
 /* Starting of timer */
 var min_el = document.getElementById('mins');
 var mins = 0;
-var seconds =59;
+var seconds =0;
 $('#start').click(function(){
       min_el.innerHTML = document.getElementById("time").value + ":";
       mins = parseInt(document.getElementById("time").value);
@@ -68,14 +68,14 @@ $('#stop').click(function(){
 
 $('#reset').click(function(){
   mins = parseInt(document.getElementById('time').value);
-	seconds =0;
+	seconds =00;
   $('#mins').html(mins+":");
   $('#seconds').html('00');
 });
 
 function startTimer(){
   timex = setTimeout(function(){
-      seconds--;
+      seconds--;    
     if(seconds < 0){
 			seconds=59;
 			mins--;
@@ -89,6 +89,11 @@ function startTimer(){
 		} else{
       $("#seconds").text(seconds);
       }
+    if(mins == 0 && seconds == 0){
+      alert('POM DONE');
+      clearTimeout(timex);
+    }else{
       startTimer();
+    }
   },1000);
 }
