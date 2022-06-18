@@ -14,9 +14,9 @@
   </head>
   <body class="container-fluid">
     <div class="row">
-      <div class="col-4 align-self-center">
-        <div class="row todo_list">
-          <h2>To Do List</h2>
+      <div class="col-4">
+        <div class="row">
+          <h3>To Do List</h3>
           <input type="text" id="myInput" placeholder="Title...">
           <span class="addBtn" onclick="newElement()">Add</span>
         </div>
@@ -25,12 +25,13 @@
       </div>
       <div class="col-4">
         <div class="row">
-          <h2 class="MainTitle">FocusPod</h2>
+          <h1 class="MainTitle">FocusPod</h2>
         </div>
         <div class="row">
           <img class="topImage" src="img/top.png" alt="topImage">
         </div>
         <div class="row">
+          <!-- Timer start-->
           <div id="timer">
             <span id="mins">60:</span>
             <span id="seconds">00</span>  
@@ -41,24 +42,22 @@
               <option value="30">30</option>
               <option value="25">25</option>
               <option value="15">15</option>
-              <option value="0">0 (testing)</option>
             </select>
             <button id="start">Start</button>
             <button id="stop">Stop</button>
             <button id="reset">Reset</button>
               </select>
           </div>
+          <!-- Timer End -->
         </div>
-
-
       </div>
 
 
 
 
       <!-- Ambient Sounds -->
-      <div class="col-4 align-self-center">
-        <h2>Ambience</h2>
+      <div class="col-4 ">
+        <h3>Ambience</h3>
         <p>Light Rain</p>
         <audio controls loop controlslist="nodownload noplaybackrate">
           <source src="sounds/light-rain.mp3" type="audio/mpeg">

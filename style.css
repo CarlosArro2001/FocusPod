@@ -1,6 +1,6 @@
 html,body{
     background-color: #E5E5E5;
-    height:200%;
+    height:100%;
     width: 100%;
     }
 
@@ -15,10 +15,12 @@ html,body{
         margin-left: auto;
         margin-right: auto;
     }
-
-    h2{
+    h1,h2,h3{
         font-family: 'Grand Hotel';
         text-align: center;
+    }
+    h2,h3{
+        padding-top: 60px;
     }
     h4{
       text-align: center;
@@ -49,6 +51,7 @@ html,body{
     }
     li{
         font-family: 'Oswald';
+        
     }
 
     ul li:hover{
@@ -68,6 +71,7 @@ html,body{
         background-color: #A9A9A9;
         color:white;
     }
+    
     /* Timer controls */
     #start,#stop,#reset{
         background-color: #C4C4C4;
